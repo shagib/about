@@ -1,0 +1,128 @@
+.header-top{
+    height: 100px;
+    background-color: $bg-color1;
+    .header-top-wrapper{
+        height: 100px;
+        .logo{
+            display: flex;
+            align-items: center;
+
+            a img{
+                width: 221px;
+                height: 46px;
+            }
+        }
+        .address-bar{
+            gap: 60px;
+            .address{
+                gap: 12px;
+                .address-icon{
+                    background: $icon-color;
+                    color: $icon-color;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    
+                    i{
+                        font-size: 22px;
+                        line-height: 22px;
+                        color: $primary-color;
+                    }
+                }
+               span{
+                font-weight: 400;
+                color: $text-color;
+               }
+                span,h5{
+                    font-size: 14px;
+                    line-height: 25px;
+                }
+                h5{
+                    font-weight: 500;
+                    color: $title-color;
+                }
+                    
+                
+            }
+        }
+        
+    }
+}
+.header-sec{
+    background-color: rgba(4, 20, 78, 0.5);
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+
+    
+    nav{
+        height: 100px;
+        
+        .nav-menu{
+            padding: 0;
+            margin: 0;
+            height: 100px;
+            align-items: center;
+
+           
+
+            li{
+                list-style: none; 
+                
+                &:hover {
+                    ul{
+                        display: block;
+                    }
+                }  
+            }
+            .dropdown {
+
+                a::after {
+                    content: "\f107";
+                    font-family: "FontAwesome";
+                    font-size: 14px;
+                    margin-left: 8px;
+                    color: $bg-color1;
+                    transition: all 0.5s ease-out;
+                    
+                }
+
+                ul {
+                    position: absolute;
+                    padding: 0;
+                    width: 220px;
+                    height: auto;
+                    left: -10px;
+                    top: 60px;
+                    border-top: 2px solid $primary-color;
+                    background-color: $bg-color1;
+                    display: none;
+                    transition: all 0.5s ease-out;
+                    
+                    li {
+                        padding: 10px 16px;
+                        width: 100%;
+                        border-bottom: 1px solid #efefef;
+
+                        &:hover {
+                            background: $primary-color;
+                            a{
+                                color: $bg-color1;
+                            }
+                            
+                            a::after{
+                                display: none;
+                            }
+                        }
+
+                        a {
+                            text-decoration: none;
+                            @include paragraph(16px, 400, 17px, $title-color, none);
+                        }
+                    }
+                }
+            }
+        }
+      
+    }
+}

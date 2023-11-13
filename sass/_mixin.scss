@@ -1,0 +1,36 @@
+@mixin subtitle($color){
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 3px;
+    font-family: "DM Sans", sans-serif;
+    color: $color;
+    text-transform: uppercase;
+}
+@mixin heading($height, $color){
+    font-size: 60px;
+    font-weight: 700;
+    line-height: $height;
+    color: $color;
+}
+@mixin paragraph($size,$weight,$height,$color, $m-top){
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    font-family: "DM Sans", sans-serif;
+    color: $color;
+    text-transform: capitalize;
+    margin-top: $m-top;
+}
+
+@mixin flex($content, $align){
+    display: flex;
+    justify-content: $content;
+    align-items: $align;
+}
+@mixin icon-img($width, $height, $bg){
+    width: $width;
+    height: $height;
+    background-color: $bg;
+    border-radius: 50px;
+}

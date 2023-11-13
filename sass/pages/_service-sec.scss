@@ -1,0 +1,102 @@
+.service-sec{
+    padding: 100px 0;
+    background-color: $bg-color;
+    position: relative;
+
+
+    .service-bg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        z-index: 0;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .service-wrapper{
+        position: relative;
+        z-index: 1;
+        @include flex(center, center);
+        flex-direction: column;
+
+        .service-title-sec{
+            padding: 0 140px;
+           h5{
+            @include subtitle($primary-color);
+           }
+           
+        }
+        .card-sec{
+            padding: 50px 0;
+
+            .service-card{
+                @include flex(none, flex-start);
+                flex-direction: column;
+                gap: 20px;
+                padding: 30px;
+                background-color: $bg-color1;
+                border-radius: 14px;
+                transition: all 0.5s ease-out;
+                position: relative;
+                top: 0;
+
+                &:hover {
+                    top: -5px;
+
+                    .card-img{
+                        transform: rotateY(-360deg);
+                        background-color: $primary-color;
+
+                        span {
+                            color: $bg-color1;
+                        }
+                    }
+                }
+
+                .card-img{
+                    @include icon-img(70px, 70px, #ECF0FB);
+                    @include flex(center,center);
+                    transition: all 0.5s ease-out;
+
+                    span{
+                        font-size: 35px;
+                        color: $primary-color;
+                    }
+                }
+                .card-title-sec{
+                    margin-top: 5px;
+                    .card-body-desc{
+                        @include paragraph(16px,400, 28px, $text-color, 10px);
+                    }
+                }
+
+                .learn-more{
+                    text-decoration: none;
+                    @include flex(none, center);
+                    gap: 12px;
+                    color: $title-color;
+                    transition: all 0.5s ease-out;
+
+                    &:hover {
+                        i {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    span{
+                        @include paragraph(16px, 500, 22px,none,none);
+                    }
+                    i{
+                        font-size: 17px;
+                        transition: all 0.5s ease-out;
+
+                    }
+                }
+            }
+        }
+        
+    }
+}

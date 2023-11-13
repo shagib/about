@@ -1,0 +1,197 @@
+.footer{
+    background-color: $bg-color2;
+    padding: 65px 0 35px 0;
+    position: relative;
+
+    .footer-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .footer-contact {
+        @include flex(space-between, center);
+        margin-bottom: 65px;
+
+        .address {
+            @include flex(flex-start,center);
+            gap: 12px;
+            
+            .address-icon {
+                @include icon-img(50px, 50px, $bg-color2);
+                border: 1px solid #A5AABB;
+                @include flex(center, center);
+    
+                i {
+                    color: $secondary-color;
+                    font-size: 22px;
+                }
+            }
+            .address-text {
+                span {
+                    @include paragraph(14px, 400, 25px, $text-color3, none);
+                }
+                h5{
+                    @include paragraph(14px, 500, 25px, $bg-color1, none);
+                }
+            }    
+        }
+    }
+    .footer-sec{
+        padding: 80px 0 70px 0;
+        border-top: 1px solid #424B6A;
+        border-bottom: 1px solid #424B6A;
+        z-index: 2;
+        position: relative;
+
+        .footer-widget {
+            .footer-logo {
+                width: 218px;
+                height: 46px;
+
+              a{
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+              }
+            }
+
+            p {
+                @include paragraph(16px, 400, 28px, $text-color3, 35px);
+
+            }
+            .social-widget {
+                margin-top: 30px;
+                display: flex;
+                gap: 12px;
+
+                a {
+                    text-decoration: none;
+                    @include icon-img(44px, 44px, #424B6A);
+                    border-radius: 10px;
+                   @include flex(center,center);
+                   font-size: 18px;
+                   color: $bg-color1;
+                   transition: all 0.5s ease-out;
+                    
+                   &:hover {
+                        background-color: $primary-color;
+                   }
+                }
+            }
+        }
+        .footer-widget-menu{
+            @include flex(none,flex-start);
+            flex-direction: column;
+
+            h3 {
+                color: $bg-color1;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                margin-top: 26px;
+
+                li {
+                    padding-bottom: 16px;
+                    width: 100%;
+
+                    &:hover {
+                        a {
+                            color: $primary-color;
+                            &::before{
+                                color: $primary-color;
+                            }
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        @include paragraph(16px, 400, 20px, $text-color3, none);
+                        transition: all 0.5s ease-out;
+
+                        &::before {
+                            content: "\f054";
+                            font-family: "FontAwesome";
+                            font-size: 14px;
+                            margin-right: 10px;
+                            color: #424B6A;
+                            transition: all 0.5s ease-out;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .subscribe-area {
+            padding: 20px 24px;
+            background-color: $bg-color1;
+            border-radius: 10px;
+
+            p {
+                @include paragraph(16px, 400, 20px, $text-color3, 24px);
+                
+            }
+            .subscribe-form {
+                gap: 24px;
+
+                .text-field {
+
+                    input {
+                        border: 1px solid #A5AABB;
+                        border-radius: 10px;
+                        padding: 16px 24px;
+                        outline: none;
+                        width: 100%;
+
+                        &::placeholder{
+                            @include paragraph(14px, 400, 21px, $text-color3, none);
+                        }
+                    }
+                }
+                a {
+                    color: $bg-color1;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    .footer-bottom-wrapper{
+        @include flex(space-between, center);
+        padding: 35px 0;
+
+        .coppyright-text {
+            span {
+                @include paragraph(16px, 400, 20px, rgba(255, 255, 255, 0.5), none);
+
+            }
+        }
+        .footer-bottom-menu {
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                
+                li {
+                    display: inline-block;
+                    margin-left: 40px;
+
+                    a {
+                        text-decoration: none;
+                        @include paragraph(16px, 400, 20px, rgba(255, 255, 255, 0.5),none);
+                    }
+                }
+            }
+        }
+    }
+}

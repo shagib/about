@@ -1,0 +1,21 @@
+.contact-sec{
+    padding: 100px 0;
+    background: url(/image/price-bg.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+
+    .page-overlay{
+        background: rgba(2, 10, 39, 0.7);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .message-form{
+        position: relative;
+        z-index: 1;
+    }
+}

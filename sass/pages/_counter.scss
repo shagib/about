@@ -1,0 +1,28 @@
+.counter-sec{
+    background-color: #ECF0FB;
+
+
+    .counter-wrapper{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 40px;
+
+
+        .counter-item{
+            padding: 49px 0;
+            flex-direction: column;
+            @include flex(none, center);
+            gap: 10px;
+
+            .number{
+                @include paragraph(60px, 700, 84px, $title-color, none);
+                span{
+                    color: $title-color;
+                }
+            }
+            p{
+                @include paragraph(18px, 500, 28px, $title-color, none);
+            }
+        }
+    }
+}

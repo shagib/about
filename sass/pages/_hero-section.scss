@@ -1,0 +1,57 @@
+.hero-sec{
+    background-image: url(/image/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 220px;
+    padding-bottom: 240px;
+    position: relative;
+    z-index: 2;
+    min-height: 900px;
+
+    .page-overlay{
+        background-color: rgba(2, 10, 39, 0.5);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+    .sub-title{
+        @include subtitle($secondary-color);
+    }
+    .heading{
+        @include heading(72px, $bg-color1);
+        font-family: "Playfair Display", sans-serif;
+        margin-top: 8px;
+        text-transform: capitalize;
+
+        span{
+            @include heading(72px, $secondary-color);
+            font-family: "Playfair Display", sans-serif;
+            
+        }
+    }
+    p{
+        @include paragraph(16px, 400, 28px,$bg-color1,none);
+        margin-top: 24px;
+    }
+    .hero-btn{
+        margin-top: 54px;
+        gap: 20px;
+    }
+    .video-btn{
+        width: 54px;
+        height: 54px;
+        padding: 18px;
+        background-color: $secondary-color;
+        border-radius: 50px;
+
+        .fa-play{
+            font-size: 18px;
+            color: $bg-color2;
+        }
+    }
+}

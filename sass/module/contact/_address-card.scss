@@ -1,0 +1,39 @@
+.address-wrapper{
+    position: relative;
+    z-index: 1;
+    background-color: $bg-color1;
+    padding: 50px;
+    border-radius: 14px;
+    gap: 50px;
+
+    .address{
+        @include flex(none,center);
+        gap: 12px;
+
+        .address-icon{
+            @include icon-img(50px, 50px, #ECF0FB);
+            @include flex(center, center);
+
+            i{
+                font-size: 22px;
+                color: $primary-color;
+            }
+        }
+
+        .address-text{
+            span{
+                @include paragraph(14px, 400, 25px, #7B84A2,none);
+            }
+            h5{
+                @include paragraph(14px, 500, 25px, $title-color,none);
+            }
+        }
+    }
+
+    .location-btn{
+
+        a{
+            padding: 15px 50px;
+        }
+    }
+}

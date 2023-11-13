@@ -1,0 +1,154 @@
+.team-sec{
+    padding: 100px 0;
+    background: $bg-color1;
+    position: relative;
+    .member-sec{
+        position: relative;
+        .team-title-sec{
+            margin-bottom: 64px;
+
+            h5{
+                @include subtitle($primary-color);
+            }
+        }
+
+
+        .team-member-area{
+            position: relative;
+
+            .slick-track{
+                margin: 0 -12px;
+
+                .team-member-slider{
+                    margin: 0 12px;
+                }
+            }
+            .prev-btn, .next-btn{
+                position: absolute;
+                bottom: -50px;
+                
+                width: 60px;
+                height: 60px;
+                border: 1px solid #D3D3D3;
+                border-radius: 50px;
+                background: $bg-color1;
+                transition: all 0.5s ease-out;
+               
+                &:hover{
+                    background-color: $primary-color;
+                    color: $bg-color1;
+                }
+
+            }
+            .next-btn{
+                right: 0;
+            }
+            
+
+            .slick-dots {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 0 110px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+
+                .slick-active button{
+                    background: $primary-color;
+                    width: 100%;
+                }
+
+                li {
+                    list-style: none;
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 5px;
+                    cursor: pointer;
+                    
+                    button {
+                        cursor: pointer;
+                        height: 5px;
+                        background: #D2D6E4;
+                        border: none;
+                        font-size: 0;
+                        width: 100%;
+
+                    }
+                }
+
+            }
+            
+            
+            .team-member{
+                border-radius: 14px;
+
+                &:hover {
+                    .team-img{
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                .team-img{
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 14px 14px 0 0;
+
+                    img{
+                        width: 100%;
+                        height: auto;
+                        transition: all 0.5s ease-out;
+                    }
+                }
+                .member-title-area{
+                    padding: 30px 25px;
+                    background-color: $bg-color;
+                    border-radius: 0 0 14px 14px;
+
+                    .member-title{
+                        text-align: center;
+
+                        .member-name{
+                            font-size: 20px;
+                        }
+                        .member-sub-title{
+                            @include paragraph(16px, 400, 28px, $primary-color, 2px);
+                        }
+                    }
+                    
+                    .member-social-site{
+                        @include flex(center,center);
+                        gap: 10px;
+                        margin-top: 30px;
+    
+                        .social-site{
+                            width: 44px;
+                            height: 44px;
+                            @include flex(center,center);
+                            background: $bg-color1;
+                            border-radius: 10px;
+                            text-decoration: none;
+                            color: $title-color;
+                            transition: all 0.5s ease-out;
+
+                                &:hover{
+                                    background: $primary-color;
+                                    color: $bg-color1;
+                                }
+
+                            i{
+                                font-size: 18px;
+                            }
+
+                           
+                        }
+    
+                    }
+
+                }
+                
+            }
+        }
+    }
+}

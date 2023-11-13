@@ -1,0 +1,35 @@
+.subcribe-sec{
+    padding: 400px 0 100px 0;
+    margin-top: -300px;
+    background-color: $bg-color;
+    
+
+    .subc-title {
+        @include flex(space-between, center);
+        
+        .input-field{
+            background: $bg-color1;
+            border-radius: 50px;
+            padding: 4px;
+            @include flex(center,center);
+
+
+            .text-field {
+                flex-grow: 1;
+                input {
+                    width: 100%;
+                    padding: 20px;
+                    height: 52px;
+                    border-radius: 50px;
+                    outline: none;
+                    border: none;
+
+                    &::placeholder{
+                        @include paragraph(16px, 400, 20px, $text-color, none);
+                    }
+                }
+            }
+           
+        }
+    }
+}

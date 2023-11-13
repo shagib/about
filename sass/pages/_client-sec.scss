@@ -1,0 +1,18 @@
+.client-sec{
+    padding: 100px 0;
+    background-color: $bg-color2;
+
+    .branding-img{
+        
+        @include flex(center,center);
+
+        .branding-img img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .slider-item-wrapper{
+        width: 224px;
+    }
+}

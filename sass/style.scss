@@ -1,0 +1,24 @@
+
+@import "common";
+@import "variable";
+@import "mixin";
+
+@import "./pages/header";
+@import "./pages/hero-section";
+@import "./pages/feature";
+@import "./pages/about";
+@import "./pages/client-sec";
+@import "./pages/service-sec";
+
+
+@import "./module/contact/contact-sec";
+@import "./module/contact/message-form";
+@import "./module/contact/address-card";
+
+@import "./pages/counter";
+@import "./pages/team-sec";
+@import "./pages/process-area";
+@import "./pages/subscribe-sec";
+@import "./pages/project-sec";
+@import "./pages/latest-post";
+@import "./pages/footer";
